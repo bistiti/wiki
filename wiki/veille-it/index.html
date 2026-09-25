@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Veille IT - Jfdslvt</title>
+<meta charset="utf-8" />
+<meta name="description" content="Synthèses de veille hebdomadaire : administration systèmes &amp; infrastructures, cybersécurité, bases de données, pilotage de projet. La synthèse la…" />
+<meta name="author" content="Wiki_Yellow" />
+<meta name="generator" content="Datenstrom Yellow" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" media="all" href="/assets/stockholm.css" />
+<link rel="icon" type="image/png" href="/assets/stockholm.png" />
+</head>
+<body>
+<div class="page layout-wiki">
+<div class="header" role="banner">
+<div class="sitename">
+<h1><a href="/"><i class="sitename-logo"></i>Jfdslvt</a></h1>
+</div>
+<div class="sitename-banner"></div>
+<div class="navigation" role="navigation" aria-label="Principale">
+<ul>
+<li><a href="/">Accueil</a></li>
+<li><a class="active" aria-current="page" href="/wiki/">Wiki</a></li>
+<li><a href="/about/">À propos</a></li>
+</ul>
+</div>
+<div class="navigation-banner"></div>
+</div>
+<div class="content">
+<div class="main" role="main">
+<div class="entry tag-veille">
+<div class="entry-title"><h1>Veille IT</h1></div>
+<div class="entry-meta"><p>Dernière mise à jour le 25/09/2026</p></div>
+<div class="entry-content"><p>Synthèses de veille hebdomadaire : administration systèmes &amp; infrastructures, cybersécurité, bases de données, pilotage de projet. La synthèse la plus récente est en haut.</p>
+
+<!-- VEILLE:ENTRIES -->
+
+<h2 id="veille-du-2026-09-25">Veille du 2026-09-25</h2>
+
+<p>Semaine du 18 au 25 septembre 2026. Synthèse des faits marquants, priorité aux sources primaires (éditeurs, CERT-FR/CISA, avis de sécurité). Les quelques éléments légèrement antérieurs à la fenêtre de 7 jours sont datés explicitement.</p>
+
+<h3 id="administration-systèmes-et-infrastructures-it">Administration systèmes et infrastructures IT</h3>
+
+<ul>
+<li><p><strong>Windows Server : Microsoft acte la dépréciation de WDS</strong> (24 sept. 2026) — Le rôle <em>Windows Deployment Services</em> (service WDS, outils de gestion et amorçage PXE) sera déprécié dès la prochaine version de Windows Server. Il faut planifier la migration du déploiement d'images vers une alternative comme Microsoft Configuration Manager. Impact direct sur les chaînes de provisioning OS. <a href="https://support.microsoft.com/servicing/os/windows/docs/2026/09/windows-deployment-services-deprecation-in-the-next-windows-server-release">Microsoft – Windows message center</a></p></li>
+<li><p><strong>Windows 11 24H2 : dernière preview et fin de support qui approche</strong> (note mise à jour le 22 sept. 2026) — La mise à jour d'aperçu non-sécurité de septembre (KB5124010) est la <strong>dernière preview</strong> pour Windows 11 24H2. Les éditions Home et Pro de la 24H2 atteignent la fin de support en <strong>octobre 2026</strong> ; seuls les correctifs de sécurité mensuels continueront. À anticiper pour les parcs encore en 24H2. <a href="https://learn.microsoft.com/en-us/windows/release-health/windows-message-center">Microsoft – Windows message center</a></p></li>
+<li><p><strong>ESU disponibles pour Windows Server 2016 et Windows 10 LTSC 2021</strong> (septembre 2026) — Les <em>Extended Security Updates</em> sont désormais achetables (tarif unifié quel que soit le canal ou l'emplacement, gestion possible via Azure Arc) avant la fin de support du <strong>12 janvier 2027</strong>. À budgéter dès maintenant pour les serveurs et postes qui ne seront pas migrés à temps. <a href="https://www.longviewsystems.com/blog/september-2026-microsoft-licensing-news/">Long View – September 2026 Microsoft Licensing News</a> · <a href="https://learn.microsoft.com/en-us/partner-center/announcements/2026-september">Microsoft Partner Center – annonces sept. 2026</a></p></li>
+</ul>
+
+<h3 id="cybersécurité">Cybersécurité</h3>
+
+<ul>
+<li><p><strong>CISA ajoute 4 failles activement exploitées au catalogue KEV</strong> (22 sept. 2026) — Échéance de correction fédérale au <strong>25 sept.</strong> Concernés : <strong>F5 BIG-IP</strong> (CVE-2026-94127, RCE), <strong>Arista VeloCloud Orchestrator</strong> (CVE-2026-93952, CVSS <strong>10.0</strong>, accès privilégié non authentifié) et <strong>Check Point</strong> (CVE-2026-93616 et CVE-2026-85102). Le CERT-FR a relayé F5 et Check Point comme « activement exploitées » dès le 23 sept. À patcher en priorité sur tout équipement exposé. <a href="https://www.cisa.gov/news-events/alerts/2026/09/22/cisa-adds-four-known-exploited-vulnerabilities-catalog">CISA – KEV 22/09</a> · <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1220/">CERT-FR AVI-1220 (F5)</a> · <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1219/">CERT-FR AVI-1219 (Check Point)</a></p></li>
+<li><p><strong>Rançongiciels : nouveau record 2026 en août</strong> (rapport publié le 23 sept. 2026) — Selon la CTI d'août de NCC Group, <strong>1 073 organisations</strong> victimes de rançongiciel dans le mois (+12 % vs juillet, plus haut niveau de l'année). Groupes dominants : <strong>Qilin</strong> (164 attributions) et <strong>The Gentlemen</strong> (116) ; secteur industriel le plus visé (31 %). Confirme la tendance à l'extorsion/vol de données sans chiffrement. <a href="https://www.infosecurity-magazine.com/news/ransomware-attacks-reach-record/">Infosecurity Magazine / NCC Group</a></p></li>
+<li><p><strong>Avis conjoint international contre le mode opératoire nord-coréen « WaterPlum » / Contagious Interview</strong> (avis du 18 sept. 2026) — FBI, NPA japonaise, ACSC australienne et services allemands documentent une campagne ayant infecté <strong>30 000 appareils</strong> dans 100+ pays et compromis 7 000+ portefeuilles crypto (~<strong>10,7 M$</strong> détournés). Vecteur : faux entretiens d'embauche poussant des paquets NPM/projets VS Code malveillants (BeaverTail, OtterCookie…). Rappel : ouvrir tout projet inconnu en mode restreint. <a href="https://www.infosecurity-magazine.com/news/north-korean-waterplum-30000/">Infosecurity Magazine</a> · <a href="https://www.ic3.gov/CSA/2026/260918.pdf">Avis IC3 (PDF)</a></p></li>
+<li><p><strong>Salve d'avis CERT-FR à corriger</strong> (23–24 sept. 2026) — Correctifs notables pour <strong>Microsoft Office</strong> (RCE, AVI-1224), <strong>GitLab</strong> (exécution de code, AVI-1225), <strong>PHP</strong> (AVI-1227), ainsi que PaperCut, Wireshark et Apache Tomcat. À intégrer au cycle de patch en cours. <a href="https://www.cert.ssi.gouv.fr/avis/">CERT-FR – Avis de sécurité</a></p></li>
+</ul>
+
+<h3 id="bases-de-données">Bases de données</h3>
+
+<ul>
+<li><p><strong>PostgreSQL 19 Beta 4 disponible</strong> (24 sept. 2026) — Dernière beta avant la <em>release candidate</em> attendue début octobre (GA possiblement en octobre). Fait notable : plusieurs fonctionnalités initialement prévues pour la v19 ont été <strong>retirées</strong> au nom de la fiabilité — SQL/PGQ (requêtes de graphes), activation/désactivation en ligne des sommes de contrôle, mises à jour/suppressions temporelles <code>FOR PORTION OF</code>, <code>MERGE/SPLIT PARTITIONS</code>. À tester dès maintenant sur charges représentatives. <a href="https://www.postgresql.org/about/news/postgresql-19-beta-4-released-3386/">PostgreSQL.org</a></p></li>
+<li><p><strong>Oracle Critical Security Patch Update – Septembre 2026</strong> (Rev 1, 15 sept. 2026) — 13 correctifs pour les produits base de données Oracle (dont 11 pour Oracle Database Server) ; <strong>5 vulnérabilités exploitables à distance sans authentification</strong>. Événement de sécurité trimestriel majeur côté DB à appliquer sur les environnements Oracle. <a href="https://www.oracle.com/security-alerts/cspusep2026.html">Oracle Security Alerts</a></p></li>
+<li><p><strong>Rappel côté SQL Server</strong> — Le Patch Tuesday du 8 sept. 2026 (édition record, 900+ CVE) a corrigé plusieurs failles critiques de <strong>Microsoft SQL Server</strong>, dont <strong>CVE-2026-65669</strong> (CVSS 9.6). À vérifier sur les instances non encore patchées. <a href="https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-september-2026/">CrowdStrike – analyse Patch Tuesday sept. 2026</a></p></li>
+</ul>
+
+<h3 id="pilotage-de-projet">Pilotage de projet</h3>
+
+<ul>
+<li><p><strong>Microsoft Project Online se retire le 30 septembre 2026</strong> — Échéance imminente. Après cette date, l'accès au service <strong>et aux données</strong> disparaît : les PMO doivent <strong>exporter leurs données avant la bascule</strong>. Trajectoires de migration : Planner (licences Planner Plan 1 / Planner and Project Plan 3 ou 5), Project Server Subscription Edition, ou Dynamics 365 Project Operations. Project desktop et Project Server ne sont <strong>pas</strong> concernés. Microsoft mise sur Planner + l'agent IA « Project Manager » et Copilot. <a href="https://techcommunity.microsoft.com/blog/plannerblog/microsoft-project-online-is-retiring-what-you-need-to-know/4450558">Microsoft – Planner Blog</a></p></li>
+<li><p><strong>Jira auto-hébergé (Data Center) : trajectoire de fin de vie</strong> (analyse du 23 sept. 2026) — Atlassian ne vend plus Jira Software Data Center aux nouveaux clients et consolide autour du cloud et de l'IA. Pour les clients existants : <strong>30 mars 2028</strong> = dernière date d'achats d'extension, <strong>28 mars 2029</strong> = Jira auto-géré passe en lecture seule. À intégrer aux feuilles de route outillage/PMO, en parallèle du dossier Project Online. <a href="https://windowsforum.com/news/microsoft-project-online-retires-september-30-2026-ending-pwa-access.445609/">WindowsForum – analyse marché PM</a></p></li>
+<li><p><strong>Fond de tableau : consolidation vers le cloud et l'IA</strong> — Ces deux mouvements (retrait de Project Online, borne EOL sur Jira DC) illustrent la bascule 2026 des outils de gestion de projet vers des plateformes cloud-first à assistance IA. Les PMO qui renouvellent ou choisissent un outil ce trimestre doivent vérifier les dates de fin de service avant de s'engager. <a href="https://windowsforum.com/news/microsoft-project-online-retires-september-30-2026-ending-pwa-access.445609/">WindowsForum</a></p></li>
+</ul>
+</div>
+<div class="entry-tags">
+<p>Tags: <a href="/wiki/tag:veille/">Veille</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="footer" role="contentinfo">
+<div class="siteinfo">
+</div>
+<div class="siteinfo-banner"></div>
+</div>
+</div>
+</body>
+</html>
