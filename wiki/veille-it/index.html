@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Veille IT - jfdslv</title>
+<meta charset="utf-8" />
+<meta name="description" content="Synthèses de veille hebdomadaire : administration systèmes &amp; infrastructures, cybersécurité, bases de données, news intelligence artificielle. La…" />
+<meta name="author" content="Wiki_Yellow" />
+<meta name="generator" content="Datenstrom Yellow" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" media="all" href="/assets/stockholm.css" />
+<link rel="icon" type="image/png" href="/assets/stockholm.png" />
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<div class="page layout-wiki">
+<div class="header" role="banner">
+<div class="sitename">
+<p class="sitename-title"><a href="/"><i class="sitename-logo"></i>jfdslv</a></p>
+</div>
+<div class="sitename-banner"></div>
+<div class="navigation" role="navigation" aria-label="Principale">
+<ul>
+<li><a href="/">Accueil</a></li>
+<li><a class="active" aria-current="page" href="/wiki/">Wiki</a></li>
+<li><a href="/about/">À propos</a></li>
+</ul>
+</div>
+<div class="navigation-banner"></div>
+</div>
+<div class="content">
+<div class="main" role="main" id="contenu" tabindex="-1">
+<div class="entry tag-veille">
+<div class="entry-title"><h1>Veille IT</h1></div>
+<div class="entry-meta"><p>Dernière mise à jour le 05/10/2026</p></div>
+<div class="entry-content"><p>Synthèses de veille hebdomadaire : administration systèmes &amp; infrastructures, cybersécurité, bases de données, news intelligence artificielle. La synthèse la plus récente est en haut.</p>
+
+<!-- VEILLE:ENTRIES -->
+
+<h2 id="veille-du-2026-10-05">Veille du 2026-10-05</h2>
+
+<p>Période couverte : 28 septembre au 5 octobre 2026. Priorité aux sources primaires (éditeurs, CERT-FR/ANSSI, CISA, avis CVE). Le complément Hacker News (top 50 des stories) a été passé en revue : aucun événement d'infrastructure, de cybersécurité ou de base de données à ajouter sur la fenêtre au-delà des sources citées ci-dessous.</p>
+
+<h3 id="administration-systèmes-et-infrastructures-it">1. Administration systèmes et infrastructures IT</h3>
+
+<p><strong>Windows 11 version 26H2 : sauvegarde des paramètres activée par défaut</strong> (30 septembre 2026). Avec le déploiement de la mise à jour 2026 (26H2), Microsoft active par défaut la stratégie de sauvegarde des paramètres Windows sur les appareils éligibles, sauf réglage explicite contraire de l'administrateur. Pour les parcs, cela devient une base de résilience : un poste réinitialisé, remplacé ou mis à niveau retrouve plus facilement ses réglages et sa liste d'applications du Store. Pilotable via Intune, GPO ou MDM. Source : <a href="https://learn.microsoft.com/en-us/windows/release-health/windows-message-center">Microsoft, Windows message center</a>.</p>
+
+<p><strong>VMware : Broadcom pousse vSphere Foundation 9.1, fin du support de vSphere 8 en octobre 2027</strong> (28 septembre 2026). Un billet VMware chiffre l'intérêt économique de passer à VCF / vSphere Foundation 9.1, alors que le support général de vSphere 8 s'arrête en octobre 2027 et que les détails d'une nouvelle édition vSphere Standard sont attendus à VMware Explore (Francfort, mi-octobre). Les équipes sous VMware doivent arbitrer entre migration vers 9.1, renouvellement ou sortie. Sources : <a href="https://blogs.vmware.com/cloud-foundation/2026/09/28/the-cost-case-is-clear-infrastructure-economics-with-vmware-vsphere-foundation-9-1/">VMware Cloud Foundation blog</a>, <a href="https://www.crn.com/news/cloud/2026/vmware-vsphere-8-end-of-support-move-to-vcf-9-1-our-no-1-mission-execs-say">CRN</a>.</p>
+
+<p><strong>Microsoft 365 : blocage des Exchange Web Services (EWS) pour les applications tierces</strong> (1er octobre 2026). Depuis le 1er octobre, Exchange Online bloque les requêtes EWS issues d'applications non-Microsoft ; Outlook, Teams et les autres produits Microsoft ne sont pas touchés. Les intégrations tierces encore sur EWS doivent basculer vers Microsoft Graph. Source : <a href="https://techcommunity.microsoft.com/t5/exchange-team-blog/retirement-of-exchange-web-services-in-exchange-online/ba-p/3924440">Microsoft, blog Exchange (retrait d'EWS)</a>.</p>
+
+<p><strong>Autres échéances Microsoft d'octobre à anticiper.</strong> Retrait de l'interface des stratégies de risque (connexion et utilisateur) dans Entra ID Protection, à migrer vers l'accès conditionnel (1er octobre) ; bascule de l'authentification de partage externe SharePoint et OneDrive du code à usage unique vers Entra B2B (octobre) ; retrait de Microsoft Publisher (13 octobre). Source : <a href="https://github.com/admindroid-community/Microsoft365-Upcoming-Deprecations-and-Changes/blob/main/Microsoft%20365-%20Upcoming%20Changes%20and%20End-of-Support%20Milestones.md">suivi AdminDroid des changements M365 (références Message Center)</a>.</p>
+
+<h3 id="cybersécurité">2. Cybersécurité</h3>
+
+<p><strong>Citrix NetScaler ADC et Gateway : huit failles, deux zero-days exploités en exécution de code</strong> (CERT-FR le 28 septembre, CISA mise à jour le 2 octobre 2026). Citrix corrige huit vulnérabilités (CVE-2026-88771 à CVE-2026-88778). La CISA ajoute CVE-2026-88771 et CVE-2026-88772 à son catalogue KEV : deux failles critiques d'exécution de code à distance activement exploitées à l'échelle mondiale. Rechercher les indicateurs de compromission avant d'appliquer les correctifs, car la mise à jour peut faire perdre des traces forensiques. Sources : <a href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-011/">CERT-FR ALE-011</a>, <a href="https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway">CISA</a>.</p>
+
+<p><strong>Cisco Catalyst SD-WAN Manager : contournement d'authentification critique exploité (CVE-2026-76504, CVSS 9.8)</strong> (avis Cisco du 30 septembre 2026). Une mauvaise gestion de l'encodage d'URI permet à un attaquant non authentifié d'obtenir un accès administrateur à l'API du Manager. Il s'agit du cinquième zero-day SD-WAN de Cisco en 2026 ; la faille a été ajoutée au KEV de la CISA le 30 septembre, avec remédiation fédérale exigée au 3 octobre. Sources : <a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-webauth-xr8beuuU">avis Cisco</a>, <a href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-new-sd-wan-authentication-bypass-zero-day-exploited-in-attacks/">BleepingComputer</a>.</p>
+
+<p><strong>Fortinet FortiMail : zero-day critique exploité (CVE-2026-104286, CVSS 9.8)</strong> (CISA KEV le 1er octobre, CERT-FR le 2 octobre 2026). Un défaut de traversée de chemin permet à un attaquant non authentifié d'écrire des fichiers arbitraires et de lire des données sensibles via des requêtes HTTP forgées (FortiMail 8.0.0 à 8.0.1). Correctif à appliquer sans délai sur les passerelles de messagerie exposées. Sources : <a href="https://www.cisa.gov/news-events/alerts/2026/10/01/cisa-adds-one-known-exploited-vulnerability-catalog">CISA KEV</a>, <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1257/">CERT-FR AVI-1257</a>, <a href="https://thehackernews.com/2026/10/critical-fortimail-zero-day-flaw.html">The Hacker News</a>.</p>
+
+<p><strong>Apple corrige en urgence une faille CoreGraphics liée à des attaques ciblées (CVE-2026-86950)</strong> (28 septembre 2026). Un dépassement de mémoire dans le rendu 2D et PDF peut mener à l'exécution de code au traitement d'un fichier piégé ; Apple évoque une attaque « extrêmement sophistiquée » contre des individus visés (iOS antérieurs à la version 27), faille signalée par Meta. Correctifs : iOS et iPadOS 26.7.1, macOS Tahoe 26.7.1, macOS Sequoia 15.8.1. Prioriser les utilisateurs à risque et vérifier le déploiement via MDM. Source : <a href="https://socprime.com/blog/cve-2026-86950-analysis/">SOC Prime (reprenant SecurityWeek et l'avis Apple)</a>.</p>
+
+<p><strong>CERT-FR : retour d'expérience sur les vulnérabilités des produits de santé</strong> (2 octobre 2026). Le CERT-FR et le CERT Santé publient un rapport (CTI-007) sur la gestion des vulnérabilités dans les produits du secteur de la santé, utile aux RSSI et équipes SOC concernés. Source : <a href="https://www.cert.ssi.gouv.fr/cti/CERTFR-2026-CTI-007/">CERT-FR CTI-007</a>.</p>
+
+<h3 id="bases-de-données">3. Bases de données</h3>
+
+<p><strong>MongoDB 9.0 disponible, avec Atlas Infinite et Atlas Agent Engine</strong> (29 septembre 2026). Version majeure annoncée à New York : jusqu'à 2 fois plus de débit sur les grosses instances, lectures environ 35 % plus rapides et mises à jour environ 30 % plus rapides que la 8.0, auxquelles s'ajoutent des briques orientées charges IA (Atlas Infinite, Atlas Agent Engine en préversion publique). Fin de vie annoncée au 31 octobre 2031. Sources : <a href="https://www.mongodb.com/company/newsroom/press-releases/mongodb-launches-mongodb-9-0-the-best-version-ever-built-and-atlas-infinite-for-ai-scale-demand">MongoDB (communiqué)</a>, <a href="https://www.mongodb.com/products/updates/">MongoDB Updates</a>.</p>
+
+<p><strong>MySQL : fin du support d'Oracle Solaris</strong> (effective le 29 septembre 2026). Selon l'avis officiel MySQL, Oracle ne fournit plus de nouvelles versions, binaires, correctifs de bugs ni correctifs de sécurité pour MySQL sur Oracle Solaris. Les déploiements MySQL sur cette plateforme doivent planifier une migration. La prochaine version Innovation (MySQL 26.10) est attendue sur la fenêtre d'octobre. Source : <a href="https://www.mysql.com/support/eol-notice.html">MySQL (annonces de fin de support)</a>.</p>
+
+<p><strong>PostgreSQL 19 : version finale attendue en octobre 2026</strong> (à venir). La bêta 4 a été publiée le 24 septembre et la feuille de route vise une sortie finale en octobre 2026. À surveiller pour les tests de compatibilité et les plans de montée de version. Sources : <a href="https://www.postgresql.org/developer/roadmap/">PostgreSQL (roadmap)</a>, <a href="https://www.postgresql.org/about/news/postgresql-186-1711-1615-1519-1424-and-19-beta-3-released-3365/">PostgreSQL (actualités)</a>.</p>
+
+<p>Semaine par ailleurs calme côté SQL Server et Oracle Database : pas d'annonce majeure sur la fenêtre.</p>
+
+<h3 id="pilotage-de-projet">4. Pilotage de projet</h3>
+
+<p><strong>Atlassian Team '26 Europe (Amsterdam, 6 au 8 octobre 2026) : les agents IA entrent dans Jira.</strong> L'événement phare ouvre cette semaine. Atlassian positionne Jira en moteur de coordination orchestrant travail humain et agents IA (Agents in Jira), avec Rovo et un Rovo MCP Server donnant à des agents tiers (Claude, Cursor, ChatGPT) l'accès aux tickets Jira et aux pages Confluence. Enjeu pour les PMO : gouvernance et sécurité des agents dans les workflows projet. Sources : <a href="https://events.atlassian.com/teameurope">Atlassian (événement)</a>, <a href="https://www.adaptavist.com/blog/accelerate-your-organisation-with-more-context-the-latest-announcements-from-atlassian-team-26">Adaptavist (annonces Team '26)</a>.</p>
+
+<p><strong>Hausse des tarifs Atlassian Cloud, effective en octobre 2026.</strong> Atlassian relève ses prix Cloud en intégrant les capacités IA (Rovo, agents) au cœur de l'offre. Impact direct sur les budgets d'outillage PMO, à anticiper lors des renouvellements. Source : <a href="https://www.adaptavist.com/blog/atlassian-price-updates-effective-october-2026">Adaptavist</a>.</p>
+
+<p><strong>Fin de vie d'Advanced Roadmaps for Jira et horizon de sortie du Data Center.</strong> Advanced Roadmaps for Jira est désormais en fin de vie ; en parallèle, Atlassian confirme l'arrêt de ses produits Jira Data Center à l'horizon mars 2029, sans option on-premise ensuite. Les organisations encore en Data Center doivent planifier leur trajectoire Cloud. Source : <a href="https://confluence.atlassian.com/support/atlassian-end-of-support-policy-201851003.html">Atlassian (politique de fin de support)</a>.</p>
+
+<p>Note : l'actualité « pilotage de projet » de la semaine est dominée par Atlassian Team '26.</p>
+
+<h2 id="veille-du-2026-09-25">Veille du 2026-09-25</h2>
+
+<p>Semaine du 18 au 25 septembre 2026. Synthèse des faits marquants, priorité aux sources primaires (éditeurs, CERT-FR/CISA, avis de sécurité). Les quelques éléments légèrement antérieurs à la fenêtre de 7 jours sont datés explicitement.</p>
+
+<h3 id="error-duplicate-heading">Administration systèmes et infrastructures IT</h3>
+
+<ul>
+<li><p><strong>Windows Server : Microsoft acte la dépréciation de WDS</strong> (24 sept. 2026) — Le rôle <em>Windows Deployment Services</em> (service WDS, outils de gestion et amorçage PXE) sera déprécié dès la prochaine version de Windows Server. Il faut planifier la migration du déploiement d'images vers une alternative comme Microsoft Configuration Manager. Impact direct sur les chaînes de provisioning OS. <a href="https://support.microsoft.com/servicing/os/windows/docs/2026/09/windows-deployment-services-deprecation-in-the-next-windows-server-release">Microsoft – Windows message center</a></p></li>
+<li><p><strong>Windows 11 24H2 : dernière preview et fin de support qui approche</strong> (note mise à jour le 22 sept. 2026) — La mise à jour d'aperçu non-sécurité de septembre (KB5124010) est la <strong>dernière preview</strong> pour Windows 11 24H2. Les éditions Home et Pro de la 24H2 atteignent la fin de support en <strong>octobre 2026</strong> ; seuls les correctifs de sécurité mensuels continueront. À anticiper pour les parcs encore en 24H2. <a href="https://learn.microsoft.com/en-us/windows/release-health/windows-message-center">Microsoft – Windows message center</a></p></li>
+<li><p><strong>ESU disponibles pour Windows Server 2016 et Windows 10 LTSC 2021</strong> (septembre 2026) — Les <em>Extended Security Updates</em> sont désormais achetables (tarif unifié quel que soit le canal ou l'emplacement, gestion possible via Azure Arc) avant la fin de support du <strong>12 janvier 2027</strong>. À budgéter dès maintenant pour les serveurs et postes qui ne seront pas migrés à temps. <a href="https://www.longviewsystems.com/blog/september-2026-microsoft-licensing-news/">Long View – September 2026 Microsoft Licensing News</a> · <a href="https://learn.microsoft.com/en-us/partner-center/announcements/2026-september">Microsoft Partner Center – annonces sept. 2026</a></p></li>
+</ul>
+
+<h3 id="error-duplicate-heading">Cybersécurité</h3>
+
+<ul>
+<li><p><strong>CISA ajoute 4 failles activement exploitées au catalogue KEV</strong> (22 sept. 2026) — Échéance de correction fédérale au <strong>25 sept.</strong> Concernés : <strong>F5 BIG-IP</strong> (CVE-2026-94127, RCE), <strong>Arista VeloCloud Orchestrator</strong> (CVE-2026-93952, CVSS <strong>10.0</strong>, accès privilégié non authentifié) et <strong>Check Point</strong> (CVE-2026-93616 et CVE-2026-85102). Le CERT-FR a relayé F5 et Check Point comme « activement exploitées » dès le 23 sept. À patcher en priorité sur tout équipement exposé. <a href="https://www.cisa.gov/news-events/alerts/2026/09/22/cisa-adds-four-known-exploited-vulnerabilities-catalog">CISA – KEV 22/09</a> · <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1220/">CERT-FR AVI-1220 (F5)</a> · <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1219/">CERT-FR AVI-1219 (Check Point)</a></p></li>
+<li><p><strong>Rançongiciels : nouveau record 2026 en août</strong> (rapport publié le 23 sept. 2026) — Selon la CTI d'août de NCC Group, <strong>1 073 organisations</strong> victimes de rançongiciel dans le mois (+12 % vs juillet, plus haut niveau de l'année). Groupes dominants : <strong>Qilin</strong> (164 attributions) et <strong>The Gentlemen</strong> (116) ; secteur industriel le plus visé (31 %). Confirme la tendance à l'extorsion/vol de données sans chiffrement. <a href="https://www.infosecurity-magazine.com/news/ransomware-attacks-reach-record/">Infosecurity Magazine / NCC Group</a></p></li>
+<li><p><strong>Avis conjoint international contre le mode opératoire nord-coréen « WaterPlum » / Contagious Interview</strong> (avis du 18 sept. 2026) — FBI, NPA japonaise, ACSC australienne et services allemands documentent une campagne ayant infecté <strong>30 000 appareils</strong> dans 100+ pays et compromis 7 000+ portefeuilles crypto (~<strong>10,7 M$</strong> détournés). Vecteur : faux entretiens d'embauche poussant des paquets NPM/projets VS Code malveillants (BeaverTail, OtterCookie…). Rappel : ouvrir tout projet inconnu en mode restreint. <a href="https://www.infosecurity-magazine.com/news/north-korean-waterplum-30000/">Infosecurity Magazine</a> · <a href="https://www.ic3.gov/CSA/2026/260918.pdf">Avis IC3 (PDF)</a></p></li>
+<li><p><strong>Salve d'avis CERT-FR à corriger</strong> (23–24 sept. 2026) — Correctifs notables pour <strong>Microsoft Office</strong> (RCE, AVI-1224), <strong>GitLab</strong> (exécution de code, AVI-1225), <strong>PHP</strong> (AVI-1227), ainsi que PaperCut, Wireshark et Apache Tomcat. À intégrer au cycle de patch en cours. <a href="https://www.cert.ssi.gouv.fr/avis/">CERT-FR – Avis de sécurité</a></p></li>
+</ul>
+
+<h3 id="error-duplicate-heading">Bases de données</h3>
+
+<ul>
+<li><p><strong>PostgreSQL 19 Beta 4 disponible</strong> (24 sept. 2026) — Dernière beta avant la <em>release candidate</em> attendue début octobre (GA possiblement en octobre). Fait notable : plusieurs fonctionnalités initialement prévues pour la v19 ont été <strong>retirées</strong> au nom de la fiabilité — SQL/PGQ (requêtes de graphes), activation/désactivation en ligne des sommes de contrôle, mises à jour/suppressions temporelles <code>FOR PORTION OF</code>, <code>MERGE/SPLIT PARTITIONS</code>. À tester dès maintenant sur charges représentatives. <a href="https://www.postgresql.org/about/news/postgresql-19-beta-4-released-3386/">PostgreSQL.org</a></p></li>
+<li><p><strong>Oracle Critical Security Patch Update – Septembre 2026</strong> (Rev 1, 15 sept. 2026) — 13 correctifs pour les produits base de données Oracle (dont 11 pour Oracle Database Server) ; <strong>5 vulnérabilités exploitables à distance sans authentification</strong>. Événement de sécurité trimestriel majeur côté DB à appliquer sur les environnements Oracle. <a href="https://www.oracle.com/security-alerts/cspusep2026.html">Oracle Security Alerts</a></p></li>
+<li><p><strong>Rappel côté SQL Server</strong> — Le Patch Tuesday du 8 sept. 2026 (édition record, 900+ CVE) a corrigé plusieurs failles critiques de <strong>Microsoft SQL Server</strong>, dont <strong>CVE-2026-65669</strong> (CVSS 9.6). À vérifier sur les instances non encore patchées. <a href="https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-september-2026/">CrowdStrike – analyse Patch Tuesday sept. 2026</a></p></li>
+</ul>
+
+<h3 id="error-duplicate-heading">Pilotage de projet</h3>
+
+<ul>
+<li><p><strong>Microsoft Project Online se retire le 30 septembre 2026</strong> — Échéance imminente. Après cette date, l'accès au service <strong>et aux données</strong> disparaît : les PMO doivent <strong>exporter leurs données avant la bascule</strong>. Trajectoires de migration : Planner (licences Planner Plan 1 / Planner and Project Plan 3 ou 5), Project Server Subscription Edition, ou Dynamics 365 Project Operations. Project desktop et Project Server ne sont <strong>pas</strong> concernés. Microsoft mise sur Planner + l'agent IA « Project Manager » et Copilot. <a href="https://techcommunity.microsoft.com/blog/plannerblog/microsoft-project-online-is-retiring-what-you-need-to-know/4450558">Microsoft – Planner Blog</a></p></li>
+<li><p><strong>Jira auto-hébergé (Data Center) : trajectoire de fin de vie</strong> (analyse du 23 sept. 2026) — Atlassian ne vend plus Jira Software Data Center aux nouveaux clients et consolide autour du cloud et de l'IA. Pour les clients existants : <strong>30 mars 2028</strong> = dernière date d'achats d'extension, <strong>28 mars 2029</strong> = Jira auto-géré passe en lecture seule. À intégrer aux feuilles de route outillage/PMO, en parallèle du dossier Project Online. <a href="https://windowsforum.com/news/microsoft-project-online-retires-september-30-2026-ending-pwa-access.445609/">WindowsForum – analyse marché PM</a></p></li>
+<li><p><strong>Fond de tableau : consolidation vers le cloud et l'IA</strong> — Ces deux mouvements (retrait de Project Online, borne EOL sur Jira DC) illustrent la bascule 2026 des outils de gestion de projet vers des plateformes cloud-first à assistance IA. Les PMO qui renouvellent ou choisissent un outil ce trimestre doivent vérifier les dates de fin de service avant de s'engager. <a href="https://windowsforum.com/news/microsoft-project-online-retires-september-30-2026-ending-pwa-access.445609/">WindowsForum</a></p></li>
+</ul>
+</div>
+<div class="entry-tags">
+<p>Tags: <a href="/wiki/tag:veille/">Veille</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="footer" role="contentinfo">
+<div class="siteinfo">
+<p><a href="/mentions-legales/">Mentions légales</a> · <a href="/confidentialite/">Politique de confidentialité</a> · <a href="/about/">À propos</a></p>
+
+<p>© 2026 wiki.jfdslv · Aucun cookie, aucun traceur.</p>
+</div>
+<div class="siteinfo-banner"></div>
+</div>
+</div>
+</body>
+</html>
